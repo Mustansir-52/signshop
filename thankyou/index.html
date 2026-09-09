@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | The Sign Shop</title>
+  <meta name="description" content="Thank you for your enquiry. The Sign Shop team will contact you shortly." />
+  <link rel="icon" type="image/svg+xml" href="../assets/Sign-Shop-logo.webp" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --orange: #E85D04;
+      --orange-hover: #FF7F27;
+      --dark: #0d0d0d;
+    }
+    
+    html,
+    body {
+      height: 100%;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--dark);
+      color: #fff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100svh;
+    }
+
+    /* ── Animated blobs (same as hero) ── */
+    @keyframes blob-move {
+      0%, 100% { transform: translate(0, 0); }
+      33%       { transform: translate(55px, 40px); }
+      66%       { transform: translate(-25px, -15px); }
+    }
+
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scale-in-x {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+
+    @keyframes checkmark {
+      0%   { stroke-dashoffset: 60; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .blob-1 {
+      top: -10%;
+      left: -5%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(ellipse at center, rgba(232, 93, 4, .28) 0%, rgba(232, 93, 4, .10) 45%, transparent 70%);
+      filter: blur(80px);
+      animation: blob-move 18s ease-in-out infinite;
+    }
+
+    .blob-2 {
+      bottom: -15%;
+      right: -5%;
+      width: 55%;
+      height: 55%;
+      background: radial-gradient(ellipse at center, rgba(232, 93, 4, .20) 0%, rgba(232, 93, 4, .07) 50%, transparent 72%);
+      filter: blur(90px);
+      animation: blob-move 22s ease-in-out infinite reverse;
+    }
+
+    /* ── Card ── */
+    .card {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    /* ── Logo ── */
+    .logo {
+      margin-bottom: 48px;
+      animation: fade-in-up .7s ease both;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ── Check icon ── */
+    .check-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(232, 93, 4, .12);
+      border: 2px solid rgba(232, 93, 4, .35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      animation: fade-in-up .7s ease .1s both;
+    }
+
+    .check-wrap svg {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: checkmark .6s ease .55s forwards;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: var(--orange);
+      border-radius: 999px;
+      margin: 28px auto 32px;
+      transform-origin: left;
+      animation: scale-in-x .6s ease .5s both;
+    }
+
+    /* ── Heading ── */
+    .ty-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 7vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -.01em;
+      animation: fade-in-up .7s ease .2s both;
+    }
+
+    .ty-heading .accent {
+      color: var(--orange);
+    }
+
+    /* ── Subtext ── */
+    .ty-sub {
+      font-size: clamp(15px, 2vw, 18px);
+      color: #999999;
+      line-height: 1.75;
+      font-weight: 300;
+      max-width: 460px;
+      animation: fade-in-up .7s ease .35s both;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBKQBBBG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <!-- Content -->
+  <div class="card">
+
+    <div class="logo">
+      <img src="../assets/Sign-Shop-logo.webp"
+           alt="The Sign Shop" />
+    </div>
+
+    <div class="check-wrap">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+           stroke="#E85D04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+    </div>
+
+    <h1 class="ty-heading">Thank <span class="accent">You</span></h1>
+
+    <div class="divider"></div>
+
+    <p class="ty-sub">
+      Our team is reviewing your enquiry and will contact you shortly.
+    </p>
+
+  </div>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBKQBBBG');</script>
+<!-- End Google Tag Manager -->
+</body>
+</html>

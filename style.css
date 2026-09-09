@@ -1,0 +1,169 @@
+/* ================================
+   WHOLE SITE FULL WIDTH + GAP FIX
+================================ */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+#page,
+.site,
+.site-content,
+.site-main,
+.content-area,
+main,
+article,
+.hentry,
+.entry-content,
+.page-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.elementor,
+.elementor-section,
+.elementor-container,
+.elementor-widget-wrap,
+.elementor-widget-container,
+.e-con,
+.e-con-inner {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+section,
+#hero,
+#trustbar,
+#problem,
+#solution,
+#table,
+#benefits,
+#process,
+#social,
+#urgency,
+#contact,
+footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+}
+
+.nav-inner,
+.hero-inner,
+.section-inner,
+.faq-contact-inner,
+.footer-inner {
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+}
+
+#navbar {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+}
+
+/* Remove unwanted top gap */
+body,
+.site,
+.site-content,
+.site-main,
+.entry-content,
+.elementor-section:first-child,
+.elementor-top-section:first-child,
+.e-con:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Hero specific fix */
+#hero {
+    margin-top: 0 !important;
+    padding-top: 112px !important;
+    /* Increased to properly clear desktop navbar */
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+
+    .hero-inner,
+    .nav-inner {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .hero-inner,
+    .nav-inner,
+    .section-inner,
+    .faq-contact-inner,
+    .footer-inner {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hero-inner,
+    .nav-inner,
+    .section-inner,
+    .faq-contact-inner,
+    .footer-inner {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    /* FIXED HERO OVERLAP ISSUE */
+    #hero {
+        padding-top: 120px !important;
+        /* Pushes content completely below the navbar */
+        align-items: flex-start !important;
+        /* Stops vertical centering from pushing content upwards off-screen */
+        height: auto !important;
+        min-height: auto !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+
+
+/* ================================
+   FAQ TEXT WRAP FIX
+================================ */
+.faq-btn {
+    white-space: normal !important;
+}
+
+.faq-q {
+    flex: 1 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    text-align: left !important;
+}
+
+.faq-chevron {
+    flex-shrink: 0 !important;
+}
